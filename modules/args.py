@@ -43,6 +43,7 @@ def parse_args() -> argparse.Namespace:
             '-lp', '--local-port',
             metavar='number',
             type=int,
+            required=True,
             help='local port number'
         )
         parser.add_argument( 
@@ -56,6 +57,7 @@ def parse_args() -> argparse.Namespace:
             '-rp', '--remote-port',
             metavar='number',
             type=int,
+            required=True,
             help='remote port number'
         )
         parser.add_argument( 

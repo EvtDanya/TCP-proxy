@@ -5,13 +5,13 @@
 ```
 git clone https://github.com/EvtDanya/ARP-Spoofing
 ``` 
-• go to install folder and install requirements:
+• go to install folder and install requirements:  
 Linux:    
 ```
 chmod +x install.sh
 sudo ./install.sh
 ```   
-Windows:
+Windows:  
 double click on BAT-file  
 
 # Abilities
