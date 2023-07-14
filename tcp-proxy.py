@@ -33,5 +33,6 @@ def receive_from(connection):
     return buffer
           
 if __name__ == '__main__':
-    # args = parse_args()
     print_logo()
+    args = parse_args()
+    
