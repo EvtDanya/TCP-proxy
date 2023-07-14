@@ -33,11 +33,11 @@ def parse_args() -> argparse.Namespace:
             formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=56)
         )
         parser.add_argument( 
-            '-lh', '--local-host',
+            '-lh', '--localhost',
             metavar='ip',
             type=Validation.validate_ip_address,
             required=True,
-            help='ip address of local host'
+            help='ip address of localhost'
         )
         parser.add_argument( 
             '-lp', '--local-port',
@@ -57,6 +57,12 @@ def parse_args() -> argparse.Namespace:
             '-rp', '--remote-port',
             metavar='number',
             type=int,
+            required=True,
+            help='remote port number'
+        )
+        parser.add_argument( 
+            '-r', '--receive-first',
+            action='store_true',
             required=True,
             help='remote port number'
         )
