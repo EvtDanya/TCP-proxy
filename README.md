@@ -3,7 +3,7 @@
 # How to start   
 • clone repository: 
 ```
-git clone https://github.com/EvtDanya/ARP-Spoofing
+git clone https://github.com/EvtDanya/TCP-proxy
 ``` 
 • go to install folder and install requirements:  
 Linux:    

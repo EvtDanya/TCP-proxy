@@ -21,4 +21,20 @@ def print_color(text, color=None) -> None:
             print(color_obj + text + Style.RESET_ALL)
             return
     print(text)  
+    
+def hexdump(src, length=16) -> None:
+    '''
+    Print a hex dump (or text) of bytes
+    '''
+    result = []
+    digits = 4 if isinstance(src, str) else 2
+
+    for i in range(0, len (src), length):
+        s = src[i:i + length]
+        hex = b' '.join([b'%0*X' % (digits, ord(x)) for x in s])
+        text = b''.join([x if 0x20 <= ord(x) < 0x7F else b'.' for x in s])
+        result.append(b'%04X %-*s %s' % (i, length * (digits + 1), hex, text))
+        
+    print_color('[>] Dump', 'yellow')
+    print(b'\n'.join(result))
   
